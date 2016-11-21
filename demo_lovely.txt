@@ -1,0 +1,9 @@
+# create a directoty by wname1
+
+    if not os.path.exists(wname1):
+        os.makedirs(wname1)
+    
+    with open((wname1+"/"+wname1+"_ascii.json"),"w") as writefile:
+        json.dump(output,writefile,ensure_ascii=True)
+    with open((wname1+"/"+wname1+"_utf8.json"),"w", encoding='utf8') as writefile:
+        json.dump(output,writefile)
